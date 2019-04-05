@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config>
+    <!--<tabs>
+        <mozg translate="label" module="mozg_base">
+            <label>MOZG</label>
+            <sort_order>2000</sort_order>
+        </mozg>
+    </tabs>-->
+    <sections>
+        <carriers translate="label">
+            <!--<header_css>header-section-carriers</header_css>
+            <class>separator-top section-carriers</class>
+            <label>Methods of Shipping</label>
+            <tab>mozg</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>120</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>-->
+            <groups>
+                <mozg_jamef translate="label" module="mozg_jamef">
+                    <label>Jamef - (powered by MOZG)</label>
+                    <sort_order>820</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <frontend_model>mozg_base/adminhtml_system_config_fieldset_method</frontend_model>
+                    <activity_path>carriers/mozg_jamef/active</activity_path>
+                    <comment>
+                          <![CDATA[<div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;"><p><a href="https://github.com/mozgbrasil/magento-jamef-php_56#mozgjamef" target="_blank">Clique aqui</a> para obter as informações do módulo</p></div>]]>
+                    </comment>
+                    <fields>
+                        <mozg_jamef_group_1 type="group" translate="label comment tooltip" module="mozg_jamef">
+                            <label>Licenciamento</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>10</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <license translate="label">
+                                    <label>Licença para uso comercial</label>
+                                    <comment></comment>
+                                    <frontend_type>textarea</frontend_type>
+                                    <config_path>carriers/mozg_jamef/license</config_path>
+                                    <sort_order>8</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </license>
+                                <license_output translate="label">
+                                    <label></label>
+                                    <comment></comment>
+                                    <license_config_path>carriers/mozg_jamef/license</license_config_path>
+                                    <method_id>mozg_jamef</method_id>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>mozg_base/adminhtml_system_config_form_field_license</frontend_model>
+                                    <sort_order>9</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </license_output>
+                            </fields>
+                        </mozg_jamef_group_1>
+                        <mozg_jamef_group_2 type="group" translate="label comment tooltip" module="mozg_jamef">
+                            <label>Configurações básica nativa</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>20</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <active translate="label,comment">
+                                    <label>Enabled</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-ativar" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>carriers/mozg_jamef/active</config_path>
+                                    <sort_order>10</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active>
+                                <sort_order translate="label">
+                                    <label>Sort Order</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-ordem-de-exibição" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/sort_order</config_path>
+                                    <sort_order>20</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </sort_order>
+                                <title translate="label">
+                                    <label>Title</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-título" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/title</config_path>
+                                    <sort_order>30</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </title>
+                                <allowed_methods translate="label">
+                                    <label>Allowed Methods</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-serviços" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>multiselect</frontend_type>
+                                    <source_model>mozg_jamef/system_config_source_method</source_model>
+                                    <config_path>carriers/mozg_jamef/allowed_methods</config_path>
+                                    <sort_order>40</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </allowed_methods>
+                                <free_method translate="label">
+                                    <label>Free Method</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-serviço-para-entrega-gratuita" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <frontend_class>free-method</frontend_class>
+                                    <source_model>mozg_jamef/system_config_source_freemethod</source_model>
+                                    <config_path>carriers/mozg_jamef/free_method</config_path>
+                                    <sort_order>50</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </free_method>
+                                <!--<max_package_weight translate="label">
+                                    <label>Maximum Package Weight (Please consult your shipping carrier for maximum supported shipping weight)</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-peso-máximo-do-pacote" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/max_package_weight</config_path>
+                                    <validate>validate-number validate-zero-or-greater</validate>
+                                    <sort_order>60</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </max_package_weight>-->
+                                <handling_type translate="label">
+                                    <label>Calculate Handling Fee</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-calcular-taxa-de-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>shipping/source_handlingType</source_model>
+                                    <config_path>carriers/mozg_jamef/handling_type</config_path>
+                                    <sort_order>70</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_type>
+                                <!--<handling_action translate="label">
+                                    <label>Handling Applied</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-aplicar-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <config_path>carriers/mozg_jamef/handling_action</config_path>
+                                    <source_model>shipping/source_handlingAction</source_model>
+                                    <sort_order>80</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_action>-->
+                                <handling_fee translate="label">
+                                    <label>Handling Fee</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-taxa-de-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/handling_fee</config_path>
+                                    <validate>validate-number validate-zero-or-greater</validate>
+                                    <sort_order>90</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_fee>
+                                <showmethod translate="label">
+                                    <label>Show Method if Not Applicable</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-mostrar-método-se-não-aplicável" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <config_path>carriers/mozg_jamef/showmethod</config_path>
+                                    <sort_order>100</sort_order>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </showmethod>
+                                <debug translate="label">
+                                    <label>Debug</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-debug" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>carriers/mozg_jamef/debug</config_path>
+                                    <sort_order>110</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </debug>
+                                <!--<sallowspecific translate="label">
+                                    <label>Ship to Applicable Countries</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-enviar-para-países-aplicáveis" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>allowspecific</frontend_type>
+                                    <sort_order>120</sort_order>
+                                    <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                                    <config_path>carriers/mozg_jamef/sallowspecific</config_path>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </sallowspecific>
+                                <specificcountry translate="label">
+                                    <label>Ship to Specific Countries</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-enviar-para-países-específicos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>multiselect</frontend_type>
+                                    <sort_order>130</sort_order>
+                                    <source_model>adminhtml/system_config_source_country</source_model>
+                                    <config_path>carriers/mozg_jamef/specificcountry</config_path>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <can_be_empty>1</can_be_empty>
+                                </specificcountry>-->
+                            </fields>
+                        </mozg_jamef_group_2>
+                        <mozg_jamef_group_3 type="group" translate="label comment tooltip" module="mozg_jamef">
+                            <label>Configurações Avançadas</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>30</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <product_attribute_width translate="label">
+                                    <label>ID Product Attribute Width</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-identificador-do-atributo-largura-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/product_attribute_width</config_path>
+                                    <sort_order>220</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_width>
+                                <product_attribute_length translate="label">
+                                    <label>ID Product Attribute Length</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-identificador-do-atributo-comprimento-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/product_attribute_length</config_path>
+                                    <sort_order>230</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_length>
+                                <product_attribute_height translate="label">
+                                    <label>ID Product Attribute Height</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-identificador-do-atributo-altura-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/product_attribute_height</config_path>
+                                    <sort_order>240</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_height>
+                                <unit_of_measure translate="label">
+                                    <label>Weight Unit</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-unidade-de-medida" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>mozg_jamef/system_config_source_unitMeasure</source_model>
+                                    <config_path>carriers/mozg_jamef/unit_of_measure</config_path>
+                                    <sort_order>250</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </unit_of_measure>
+                                <prazo_entrega translate="label">
+                                    <label>Exibir Prazo de Entrega</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-exibir-prazo-de-entrega" target="_blank">__?__</a>]]></comment>
+                                     <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>carriers/mozg_jamef/prazo_entrega</config_path>
+                                    <sort_order>270</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </prazo_entrega>
+                                <msgprazo translate="label">
+                                    <label>Mensagem que Exibe o Prazo de Entrega</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-mensagem-que-exibe-o-prazo-de-entrega" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/msgprazo</config_path>
+                                    <sort_order>280</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <depends><prazo_entrega>1</prazo_entrega></depends>
+                                </msgprazo>
+                                <add_prazo translate="label">
+                                    <label>Adicionar (dias) ao prazo de entrega</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-adicionar-dias-ao-prazo-de-entrega" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/add_prazo</config_path>
+                                    <sort_order>290</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <depends><prazo_entrega>1</prazo_entrega></depends>
+                                </add_prazo>
+                                <display_result_error translate="label">
+                                    <label>Mostrar serviço com retorno de erro</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-mostrar-serviço-com-retorno-de-erro" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <config_path>carriers/mozg_jamef/display_result_error</config_path>
+                                    <sort_order>300</sort_order>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </display_result_error>
+                            </fields>
+                        </mozg_jamef_group_3>
+                        <mozg_jamef_group_4 type="group" translate="label comment tooltip" module="mozg_jamef">
+                            <label>Configurações para integração</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>40</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <tipo_produto translate="label">
+                                    <label>Tipo de Produto a ser transportado</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-tipo-de-produto-a-ser-transportado" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>mozg_jamef/system_config_source_segprod</source_model>
+                                    <config_path>carriers/mozg_jamef/tipo_produto</config_path>
+                                    <sort_order>509</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </tipo_produto>
+                                <remetente_cnpj translate="label">
+                                    <label>CPF ou CNPJ</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-cpf-ou-cnpj-do-cliente-que-será-responsável-pelo-pagamento" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/remetente_cnpj</config_path>
+                                    <sort_order>510</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </remetente_cnpj>
+                                <filial_coleta translate="label">
+                                    <label>Filial de Coleta Jamef</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-filial-da-jamef-que-irá-efetuar-a-coleta-da-mercadoria-e-emitir-o-ctrc-do-cliente" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>mozg_jamef/system_config_source_filialcoleta</source_model>
+                                    <config_path>carriers/mozg_jamef/filial_coleta</config_path>
+                                    <sort_order>520</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </filial_coleta>
+                                <municipio_origem translate="label">
+                                    <label>Municipio de origem</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-nome-do-munic%C3%ADpio-de-origem-da-mercadoria-mesmo-munic%C3%ADpio-do-cliente-respons%C3%A1vel" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/municipio_origem</config_path>
+                                    <sort_order>530</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </municipio_origem>
+                                <estado_origem translate="label">
+                                    <label>Estado de origem</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-jamef-php_56/blob/master/README.md#-sigla-do-estado-de-origem" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_jamef/estado_origem</config_path>
+                                    <sort_order>540</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </estado_origem>
+                            </fields>
+                        </mozg_jamef_group_4>
+                     </fields>
+                </mozg_jamef>
+            </groups>
+        </carriers>
+    </sections>
+</config>
